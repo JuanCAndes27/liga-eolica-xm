@@ -1,0 +1,29 @@
+name: Claude (analista de la liga)
+
+# OPCIONAL. Menciona @claude en un issue o PR, p. ej.:
+#   "@claude ¿por qué todos los modelos perdieron plata el martes? revisa datos/historico.csv"
+#   "@claude revisa mi modelo y sugiere cómo ganarle a GBM cuantil óptimo"
+# Requiere el secreto ANTHROPIC_API_KEY (Settings → Secrets and variables → Actions).
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+
+jobs:
+  claude:
+    if: contains(github.event.comment.body || github.event.issue.body, '@claude')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

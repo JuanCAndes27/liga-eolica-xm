@@ -1,0 +1,46 @@
+name: 🌬️ Pronóstico eólico diario
+
+on:
+  schedule:
+    - cron: "0 12 * * *"        # 07:00 hora Colombia, todos los días
+  workflow_dispatch:             # botón "Run workflow" en la pestaña Actions
+    inputs:
+      backtest:
+        description: "Días de backtest (0 = no)"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency: liga
+
+jobs:
+  liga:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Probar conexión con XM y Open-Meteo
+        continue-on-error: true
+        run: |
+             curl -s -o /dev/null --max-time 30 -w "XM:         HTTP %{http_code} en %{time_total}s\n" \
+               -X POST https://servapibi.xm.com.co/Lists -H "Content-Type: application/json" \
+               -d '{"MetricId":"ListadoMetricas"}' || echo "XM:         ❌ sin conexión"
+             curl -s -o /dev/null --max-time 30 -w "Open-Meteo: HTTP %{http_code} en %{time_total}s\n" \
+               "https://api.open-meteo.com/v1/forecast?latitude=12.17&longitude=-72.10&hourly=wind_speed_80m" \
+               || echo "Open-Meteo: ❌ sin conexión"
+      - name: Correr la liga
+        run: python -m liga.run_diario --backtest ${{ github.event.inputs.backtest || 0 }}
+      - name: Publicar resultados
+        run: |
+          git config user.name  "liga-bot"
+          git config user.email "liga-bot@users.noreply.github.com"
+          git add datos predicciones resultados LEADERBOARD.md
+          git commit -m "🌬️ Compromiso y leaderboard $(date -u +%F)" || echo "Sin cambios"
+          git push
