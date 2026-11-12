@@ -1,6 +1,6 @@
 # 🌬️ Liga de Pronóstico Eólico Colombia — Leaderboard
 
-_Actualizado: 2026-11-11 14:08 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
+_Actualizado: 2026-11-12 14:25 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
 
 ## 🏆 Liga oficial (compromisos hechos ANTES de conocer el dato real)
 
