@@ -1,16 +1,16 @@
 # 🌬️ Liga de Pronóstico Eólico Colombia — Leaderboard
 
-_Actualizado: 2026-11-16 16:30 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
+_Actualizado: 2026-11-18 14:50 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
 
 ## 🏆 Liga oficial (compromisos hechos ANTES de conocer el dato real)
 
 | # | Modelo | Autor | Días | 💵 Costo de desvío (USD/día) | % del valor de la energía | Skill $ vs persistencia | MAE (MWh) | Sesgo (MWh) |
 |---|---|---|---|---|---|---|---|---|
-| 🥇 | GBM cuantil óptimo | profe | 18 | 3,467 | 7.7% | +33.1% | 3.51 | -0.75 |
-| 🥈 | GBM viento | profe | 18 | 3,895 | 8.7% | +24.9% | 3.47 | +0.39 |
-| 🥉 | Curva de potencia empírica | profe | 18 | 4,210 | 9.4% | +18.8% | 3.83 | +0.51 |
-| 4 | Perfil horario 14 días | profe | 18 | 4,403 | 9.8% | +15.1% | 3.82 | +0.33 |
-| 5 | Persistencia | profe | 18 | 5,185 | 11.5% | — | 5.25 | -1.65 |
+| 🥇 | GBM cuantil óptimo | profe | 18 | 3,472 | 7.7% | +33.1% | 3.51 | -0.74 |
+| 🥈 | GBM viento | profe | 18 | 3,906 | 8.7% | +24.7% | 3.48 | +0.40 |
+| 🥉 | Curva de potencia empírica | profe | 18 | 4,214 | 9.4% | +18.8% | 3.83 | +0.52 |
+| 4 | Perfil horario 14 días | profe | 18 | 4,411 | 9.8% | +15.0% | 3.82 | +0.34 |
+| 5 | Persistencia | profe | 18 | 5,188 | 11.5% | — | 5.24 | -1.63 |
 
 ![último día](resultados/ultimo_dia.png)
 
