@@ -1,16 +1,16 @@
 # 🌬️ Liga de Pronóstico Eólico Colombia — Leaderboard
 
-_Actualizado: 2026-11-23 18:13 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
+_Actualizado: 2026-11-24 16:51 (hora Colombia) · Parque: **Guajira I** (20 MW) · Gana quien **pierde menos dinero por desviaciones**: faltar cuesta 50% del precio de bolsa, sobrar cuesta 20% · TRM 3,800 · Cuantil óptimo teórico ≈ 0.29_
 
 ## 🏆 Liga oficial (compromisos hechos ANTES de conocer el dato real)
 
 | # | Modelo | Autor | Días | 💵 Costo de desvío (USD/día) | % del valor de la energía | Skill $ vs persistencia | MAE (MWh) | Sesgo (MWh) |
 |---|---|---|---|---|---|---|---|---|
-| 🥇 | GBM cuantil óptimo | profe | 21 | 3,917 | 8.4% | +29.2% | 3.56 | -0.29 |
-| 🥈 | GBM viento | profe | 21 | 4,353 | 9.3% | +21.3% | 3.55 | +0.78 |
-| 🥉 | Perfil horario 14 días | profe | 21 | 4,500 | 9.7% | +18.6% | 3.89 | -0.05 |
-| 4 | Curva de potencia empírica | profe | 21 | 4,597 | 9.9% | +16.9% | 3.86 | +0.89 |
-| 5 | Persistencia | profe | 21 | 5,532 | 11.9% | — | 5.46 | -1.94 |
+| 🥇 | GBM cuantil óptimo | profe | 23 | 3,793 | 8.1% | +33.3% | 3.41 | -0.27 |
+| 🥈 | GBM viento | profe | 23 | 4,250 | 9.0% | +25.3% | 3.43 | +0.78 |
+| 🥉 | Perfil horario 14 días | profe | 23 | 4,577 | 9.7% | +19.6% | 3.97 | -0.22 |
+| 4 | Curva de potencia empírica | profe | 23 | 4,595 | 9.8% | +19.3% | 3.82 | +0.87 |
+| 5 | Persistencia | profe | 23 | 5,691 | 12.1% | — | 5.61 | -2.16 |
 
 ![último día](resultados/ultimo_dia.png)
 
@@ -20,11 +20,11 @@ _Ojo: en el backtest el 'pronóstico' de viento es casi el viento observado → 
 
 | # | Modelo | Autor | Días | 💵 Costo de desvío (USD/día) | % del valor de la energía | Skill $ vs persistencia | MAE (MWh) | Sesgo (MWh) |
 |---|---|---|---|---|---|---|---|---|
-| 🥇 | GBM cuantil óptimo | profe | 14 | 3,385 | 5.8% | +46.4% | 2.85 | -0.80 |
-| 🥈 | GBM viento | profe | 14 | 3,828 | 6.6% | +39.4% | 2.72 | +0.29 |
-| 🥉 | Curva de potencia empírica | profe | 14 | 4,020 | 6.9% | +36.3% | 3.11 | -0.26 |
-| 4 | Perfil horario 14 días | profe | 14 | 5,555 | 9.6% | +12.0% | 3.52 | +1.73 |
-| 5 | Persistencia | profe | 14 | 6,315 | 10.9% | — | 4.55 | +0.66 |
+| 🥇 | GBM cuantil óptimo | profe | 14 | 3,377 | 5.8% | +46.3% | 2.85 | -0.80 |
+| 🥈 | GBM viento | profe | 14 | 3,818 | 6.6% | +39.3% | 2.72 | +0.29 |
+| 🥉 | Curva de potencia empírica | profe | 14 | 4,013 | 6.9% | +36.2% | 3.11 | -0.26 |
+| 4 | Perfil horario 14 días | profe | 14 | 5,531 | 9.5% | +12.1% | 3.52 | +1.73 |
+| 5 | Persistencia | profe | 14 | 6,292 | 10.8% | — | 4.55 | +0.66 |
 
 ![backtest](resultados/backtest.png)
 
